@@ -60,7 +60,7 @@ public class Repository {
 //                System.out.println("Метка найдена.");
             }
         }
-        return result;
+       return result;
     }
 
     public List<Issue> findByAssignee(String assignee) {
@@ -83,16 +83,4 @@ public class Repository {
         return items;
     }
 
-    public List<Issue> changeStatus(int id) {
-        List<Issue> result = new ArrayList<>();
-        for (Issue item : items) {
-            if (item.check(id)) {
-//                System.out.println("Назначенный найден.");
-            }
-        }
-        for(Issue item: items){
-            System.out.println(item);
-        }
-        return result;
-    }
 }

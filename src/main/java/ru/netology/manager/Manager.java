@@ -3,6 +3,7 @@ package ru.netology.manager;
 import ru.netology.domain.Issue;
 import ru.netology.repository.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Manager {
@@ -46,7 +47,18 @@ public class Manager {
     }
 
     public List<Issue> changeManagerStatus(int id) {
-        return repository.changeStatus(id);
+        List<Issue> items = repository.findAll();
+        List<Issue> result = new ArrayList<>();
+
+        for (Issue item : items) {
+            if (item.check(id)) {
+//                System.out.println("Назначенный найден.");
+            }
+        }
+//        for(Issue item: items){
+//            System.out.println(item);
+//        }
+        return result;
     }
 
 }
