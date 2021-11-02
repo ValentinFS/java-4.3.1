@@ -33,9 +33,9 @@ public class Main {
         manager.searchByAuthor("Иванов");
         manager.searchByLabel("component, status");
         manager.searchByAssignee("Сидоров");
-//        manager.getAll();
-//        manager.sortManagerAll();
-//        manager.changeManagerStatus(8);
+        manager.getAll();
+        manager.sortManagerAll();
+        manager.changeManagerStatus(8);
 
 //         System.out.println(manager.searchByOpen("Open"));
 //         System.out.println(manager.searchByOpen("Closed"));
