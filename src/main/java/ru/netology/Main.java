@@ -32,10 +32,10 @@ public class Main {
         manager.searchByClosed("Closed");
         manager.searchByAuthor("Иванов");
         manager.searchByLabel("component, status");
-        manager.searchByAssignee("Label7");
-        manager.getAll();
-        manager.sortManagerAll();
-        manager.changeManagerStatus(4);
+        manager.searchByAssignee("Сидоров");
+//        manager.getAll();
+//        manager.sortManagerAll();
+//        manager.changeManagerStatus(8);
 
 //         System.out.println(manager.searchByOpen("Open"));
 //         System.out.println(manager.searchByOpen("Closed"));

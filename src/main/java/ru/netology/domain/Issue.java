@@ -61,6 +61,7 @@ public class Issue implements Comparable<Issue> {
         if (this.label.contains(label)) {
             return true;
         }
+
         return false;
     }
 
@@ -74,10 +75,10 @@ public class Issue implements Comparable<Issue> {
 
     public boolean check(int id) {
         if (this.id == id) {
-            if(status.contains("Open")){
-                status="Closed";
+            if (status.contains("Open")) {
+                status = "Closed";
             } else {
-                status="Open";
+                status = "Open";
             }
         }
         return true;

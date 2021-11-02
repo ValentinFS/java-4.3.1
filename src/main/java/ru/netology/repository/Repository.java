@@ -2,13 +2,12 @@ package ru.netology.repository;
 
 import ru.netology.domain.Issue;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Repository {
 
     List<Issue> items = new ArrayList<>();
+//    Set<Issue> labels = new HashSet<Issue>();
 
     public void save(Issue issue) {
         items.add(issue);
@@ -52,25 +51,28 @@ public class Repository {
         return result;
     }
 
-    public List<Issue> findByLabel(String label) {
-        List<Issue> result = new ArrayList<>();
+
+    public Set<Issue> findByLabel(String label) {
+        Set<Issue> result = new HashSet<>();
         for (Issue item : items) {
             if (item.matchesLabel(label)) {
                 result.add(item);
 //                System.out.println("Метка найдена.");
             }
         }
-       return result;
+        return result;
     }
 
-    public List<Issue> findByAssignee(String assignee) {
-        List<Issue> result = new ArrayList<>();
+
+    public Set<Issue> findByAssignee(String assignee) {
+        Set<Issue> result = new HashSet<>();
         for (Issue item : items) {
             if (item.matchesAssignee(assignee)) {
                 result.add(item);
 //                System.out.println("Назначенный найден.");
             }
         }
+
         return result;
     }
 

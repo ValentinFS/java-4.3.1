@@ -3,8 +3,7 @@ package ru.netology.manager;
 import ru.netology.domain.Issue;
 import ru.netology.repository.Repository;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Manager {
 
@@ -34,11 +33,11 @@ public class Manager {
         return repository.findByAuthor(author);
     }
 
-    public List<Issue> searchByLabel(String label) {
+    public Set<Issue> searchByLabel(String label) {
         return repository.findByLabel(label);
     }
 
-    public List<Issue> searchByAssignee(String assignee) {
+    public Set<Issue> searchByAssignee(String assignee) {
         return repository.findByAssignee(assignee);
     }
 
@@ -55,7 +54,7 @@ public class Manager {
 //                System.out.println("Назначенный найден.");
             }
         }
-//        for(Issue item: items){
+//        for (Issue item : items) {
 //            System.out.println(item);
 //        }
         return result;
