@@ -35,7 +35,9 @@ public class Main {
         manager.searchByAssignee("Сидоров");
         manager.getAll();
         manager.sortManagerAll();
-        manager.changeManagerStatus(8);
+//        manager.changeManagerStatus(8);
+        manager.closeIssue(3);
+        manager.openIssue(7);
 
 //         System.out.println(manager.searchByOpen("Open"));
 //         System.out.println(manager.searchByOpen("Closed"));

@@ -11,7 +11,6 @@ public class Repository {
 
     public void save(Issue issue) {
         items.add(issue);
-//         System.out.println("Issue добавлен.");
     }
 
     public List<Issue> findAll() {
@@ -25,7 +24,6 @@ public class Repository {
                 result.add(item);
             }
         }
-//        System.out.println("Все ОК Repository.");
         return result;
     }
 
@@ -36,7 +34,6 @@ public class Repository {
                 result.add(item);
             }
         }
-//        System.out.println("Все ОК Repository.");
         return result;
     }
 
@@ -45,7 +42,6 @@ public class Repository {
         for (Issue item : items) {
             if (item.matchesAuthor(author)) {
                 result.add(item);
-//                System.out.println("Автор найден.");
             }
         }
         return result;
@@ -57,7 +53,6 @@ public class Repository {
         for (Issue item : items) {
             if (item.matchesLabel(label)) {
                 result.add(item);
-//                System.out.println("Метка найдена.");
             }
         }
         return result;
@@ -69,7 +64,6 @@ public class Repository {
         for (Issue item : items) {
             if (item.matchesAssignee(assignee)) {
                 result.add(item);
-//                System.out.println("Назначенный найден.");
             }
         }
 

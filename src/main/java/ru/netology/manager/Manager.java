@@ -3,7 +3,9 @@ package ru.netology.manager;
 import ru.netology.domain.Issue;
 import ru.netology.repository.Repository;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 public class Manager {
 
@@ -45,13 +47,40 @@ public class Manager {
         return repository.sortAll();
     }
 
-    public List<Issue> changeManagerStatus(int id) {
+//    public List<Issue> changeManagerStatus(int id) {
+//        List<Issue> items = repository.findAll();
+//        List<Issue> result = new ArrayList<>();
+//
+//        for (Issue item : items) {
+//            if (item.changeStatus(id)) {
+//            }
+//        }
+////        for (Issue item : items) {
+////            System.out.println(item);
+////        }
+//        return result;
+//    }
+
+    public List<Issue> closeIssue(int id) {
         List<Issue> items = repository.findAll();
         List<Issue> result = new ArrayList<>();
-
         for (Issue item : items) {
-            if (item.check(id)) {
-//                System.out.println("Назначенный найден.");
+            if (item.getId() == id) {
+                item.close(id);
+            }
+        }
+//        for (Issue item : items) {
+//            System.out.println(item);
+//        }
+        return result;
+    }
+
+    public List<Issue> openIssue(int id) {
+        List<Issue> items = repository.findAll();
+        List<Issue> result = new ArrayList<>();
+        for (Issue item : items) {
+            if (item.getId() == id) {
+                item.open(id);
             }
         }
 //        for (Issue item : items) {

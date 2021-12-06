@@ -73,14 +73,24 @@ public class Issue implements Comparable<Issue> {
     }
 
 
-    public boolean check(int id) {
-        if (this.id == id) {
-            if (status.contains("Open")) {
-                status = "Closed";
-            } else {
-                status = "Open";
-            }
-        }
+//    public boolean changeStatus(int id) {
+//        if (this.id == id) {
+//            if (status.contains("Open")) {
+//                status = "Closed";
+//            } else {
+//                status = "Open";
+//            }
+//        }
+//        return true;
+//    }
+
+    public boolean close(int id) {
+        status = "Closed";
+        return true;
+    }
+
+    public boolean open(int id) {
+        status = "Open";
         return true;
     }
 
