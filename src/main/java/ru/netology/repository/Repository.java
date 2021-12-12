@@ -72,10 +72,11 @@ public class Repository {
 
 
     public List<Issue> sortAll() {
-        Collections.sort(items);
-        for (Issue item : items) {
-//            System.out.println(item);
-        }
+        Collections.sort(items, new Comparator<Issue>() {
+                public int compare(Issue o1, Issue o2) {
+                return o1.toString().compareTo(o2.toString());
+            }
+        });
         return items;
     }
 
